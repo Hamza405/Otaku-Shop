@@ -6,7 +6,7 @@ import AppBarMobile from "./AppBarMobile";
 const AppBar = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
-  return isMobile ? <AppBarMobile /> : <AppBarDesktop />;
+  return isMobile ? <AppBarMobile /> : <AppBarDesktop isMobile={isMobile} />;
 };
 
 export default AppBar;
