@@ -17,10 +17,11 @@ export const AppBarContainer = styled(Box)(() => ({
   padding: "2px 8px",
 }));
 
-export const AppBarHeader = styled(Typography)(() => ({
+export const AppBarHeader = styled(Typography)(({ isMobile }) => ({
   padding: "4px",
+  textAlign: isMobile && "center",
   flexGrow: 1,
-  fontSize: "4em",
+  fontSize: isMobile ? "3em" : "4em",
   fontFamily: '"Montez", "cursive"',
   color: Colors.secondary,
 }));
@@ -32,19 +33,21 @@ export const AppBarList = styled(List)(({ type }) => ({
   flexGrow: 3,
 }));
 
-export const ItemButton = styled(ListItemButton)(() => ({
+export const ActionItemButton = styled(ListItemButton)(() => ({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
 }));
 
-export const ItemIcon = styled(ListItemIcon)(() => ({
+export const ActionItemIcon = styled(ListItemIcon)(({ isMobile }) => ({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
+  color: isMobile && Colors.secondary,
 }));
 
 export const ActionContainerMobile = styled(Box)(() => ({
+  margin: 0,
   display: "flex",
   backgroundColor: Colors.shaft,
   position: "fixed",

@@ -2,30 +2,41 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import PersonIcon from "@mui/icons-material/Person";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import React from "react";
-import { AppBarList, ItemButton, ItemIcon } from "../../styles/AppBarStyles";
+import {
+  ActionContainerDesktop,
+  ActionContainerMobile,
+  AppBarList,
+  ActionItemButton,
+  ActionItemIcon,
+} from "../../styles/AppBarStyles";
 import { Divider } from "@mui/material";
 
-const Actions = () => {
+const Actions = ({ isMobile }) => {
+  const ActionContainer = isMobile
+    ? ActionContainerMobile
+    : ActionContainerDesktop;
   return (
-    <AppBarList sx={{ flexGrow: 1 }} type="row">
-      <ItemButton>
-        <ItemIcon>
-          <ShoppingCartIcon />
-        </ItemIcon>
-      </ItemButton>
-      <Divider orientation="vertical" flexItem />
-      <ItemButton>
-        <ItemIcon>
-          <FavoriteIcon />
-        </ItemIcon>
-      </ItemButton>
-      <Divider orientation="vertical" flexItem />
-      <ItemButton>
-        <ItemIcon>
-          <PersonIcon />
-        </ItemIcon>
-      </ItemButton>
-    </AppBarList>
+    <ActionContainer>
+      <AppBarList sx={{ flexGrow: 1 }} type="row">
+        <ActionItemButton>
+          <ActionItemIcon isMobile={isMobile}>
+            <ShoppingCartIcon />
+          </ActionItemIcon>
+        </ActionItemButton>
+        <Divider orientation="vertical" flexItem />
+        <ActionItemButton>
+          <ActionItemIcon isMobile={isMobile}>
+            <FavoriteIcon />
+          </ActionItemIcon>
+        </ActionItemButton>
+        <Divider orientation="vertical" flexItem />
+        <ActionItemButton>
+          <ActionItemIcon isMobile={isMobile}>
+            <PersonIcon />
+          </ActionItemIcon>
+        </ActionItemButton>
+      </AppBarList>
+    </ActionContainer>
   );
 };
 
