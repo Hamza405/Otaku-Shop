@@ -1,25 +1,11 @@
-import {
-  Button,
-  Container,
-  IconButton,
-  Typography,
-  Stack,
-  Fab,
-  FormControl,
-  InputLabel,
-  Select,
-  MenuItem,
-  Divider,
-  List,
-  ListItem,
-  Tooltip,
-  Card,
-} from "@mui/material";
-import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
-import AccountCircleSharpIcon from "@mui/icons-material/AccountCircleSharp";
-
+import { Container, Button, ThemeProvider } from "@mui/material";
+import theme from "./styles/theme";
 function App() {
-  return <Container sx={{ mt: 11 }}></Container>;
+  return (
+    <ThemeProvider theme={theme}>
+      <Container maxWidth="xl" sx={{ background: "#fff" }}></Container>
+    </ThemeProvider>
+  );
 }
 
 export default App;
