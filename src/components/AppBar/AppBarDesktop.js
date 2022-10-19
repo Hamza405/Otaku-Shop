@@ -11,7 +11,7 @@ import Actions from "../Actions/Actions";
 const AppBarDesktop = ({ isMobile }) => {
   return (
     <AppBarContainer>
-      <AppBarHeader>My Header</AppBarHeader>
+      <AppBarHeader isMobile={isMobile}>My Header</AppBarHeader>
       <AppBarList type="row">
         <ListItemText primary="Home" />
         <ListItemText primary="Category" />

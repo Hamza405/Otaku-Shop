@@ -11,7 +11,7 @@ const AppBarMobile = ({ isMobile }) => {
       <ListItemButton>
         <MenuIcon />
       </ListItemButton>
-      <AppBarHeader isMobile>My Header</AppBarHeader>
+      <AppBarHeader isMobile={isMobile}>My Header</AppBarHeader>
       <ListItemButton
         sx={{
           justifyContent: "end",
