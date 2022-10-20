@@ -14,11 +14,8 @@ const Banner = () => {
       <BannerImage src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Kunai05.jpg" />
       <BannerContent>
         <Typography variant="h6">Huge Collection</Typography>
-        <BannerTitle variant="h2">New Collection</BannerTitle>
-        <BannerDes>
-          Lorem Lorem Lorem Lorem LoremLorem Lorem
-          LoremLoremLoremLoremLoremLoremLoremLorem
-        </BannerDes>
+        <BannerTitle variant="h4">New Hates</BannerTitle>
+        <BannerDes>Lorem Lorem Lorem Lorem LoremLore Lorem</BannerDes>
       </BannerContent>
     </BannerContainer>
   );
